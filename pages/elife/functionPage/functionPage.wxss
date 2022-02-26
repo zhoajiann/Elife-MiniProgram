@@ -1,0 +1,13 @@
+/* pages/elife/functionPage/functionPage.wxss */
+page{
+  background-color: white;
+}
+
+.funChoice {
+  text-align: center;
+}
+
+.fun {
+  height: 230rpx;
+}
+

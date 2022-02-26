@@ -1,0 +1,31 @@
+	<view style="overflow:visible">
+		<view class="flex align-center justify-center" bindtap="ChooseImage" wx:if="{{!stepimg}}" style="height:1000rpx">
+			<text class="cuIcon-cameraadd flex" style="font-size:100rpx"></text>
+			<text style="font-size:30rpx"> 点击上传此步骤所需的app图片</text>
+		</view>
+		<view wx:if="{{stepimg}}">
+			<image src='{{stepimg}}' mode='widthFix' style="width:100%" bindtap="getDote"></image>
+			<image src='../../../pics/dote.png' class="dote animImage" style="position:absolute;left:{{dote1}}px;top:{{dote2}}px;" bindtap="nextStep"></image>
+		</view>
+	</view>
+	<view class="cu-modal {{modalName=='DialogModal'?'show':''}}">
+		<view class="cu-dialog">
+			<view class="cu-bar justify-end bg-white">
+				<view class="content text-bold">教程制作指引</view>
+				<view class="action" bindtap="hideModal">
+					<text class="cuIcon-close text-grey"></text>
+				</view>
+			</view>
+			<view class="padding-xl solid">
+				<input placeholder="请输入此步骤文字描述" name="steptext" bindinput="getSteptext"></input>
+			</view>
+			<view class="cu-bar justify-center bg-white">
+				<view class="action">
+					<button class="cu-btn line-green text-green" bindtap="stepMake" data-isfinish='0' style="width:200rpx;margin-right:50rpx;font-weight:normal">继续制作</button>
+					<button class="cu-btn bg-green" bindtap="stepMake" style="width:200rpx;font-weight:normal">完成制作</button>
+				</view>
+			</view>
+		</view>
+	</view>
+
+

@@ -1,0 +1,43 @@
+<!--pages/share/share.wxml-->
+<!-- 搜索框 -->
+<view class="box"  style="margin:0">
+  <view class="cu-bar search bg-white" style="margin:0">
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input type="text" placeholder="试试输入APP名字或功能名字" value="{{inputValue}}" id="searchBox" bindinput="cacheKwd" name="searchKwd" ></input>
+      <view bindtap="deleteText" wx:if="{{inputValue}}"  style="margin-right:25rpx">
+        <text class="cuIcon-roundclose"></text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 教程列表 -->
+<view wx:for="{{list}}" wx:key="index" class="margin bg-white card-menu list">
+  <view style="height:230rpx;position:relative" bindtap="goToPage" data-target="Image" id="{{list[index]['id']}}">
+    <view class="ap">
+      <image src="{{list[index]['icon']}}" style="width:180rpx;height:180rpx;">
+      </image>
+    </view>
+    <view style="position:absolute;top:0;right:0;width:460rpx;height:230rpx;">
+      <view> 
+        <text class="funtext">{{item['funcname']}} </text>
+        <text class="apptext">{{list[index]['appname']}}</text>
+      </view>
+
+      <view  class="padding-sm flex flex-wrap" style="padding:0">
+          <view wx:for="{{item['reason1']}}" wx:key="index" class="cu-tag bg-{{item.color}}" style="display:'inline-block'">{{item.name}}</view>
+          <!-- <view class="cu-tag bg-orange">{{item['reason1'][1]}}</view>
+          <view class="cu-tag bg-red">{{item['reason1'][2]}}</view> -->
+      </view>
+      <view style="position:absolute;right:30rpx;bottom:30rpx">用户 {{item['username']}} 发布于 {{item['time']}}</view>
+
+    </view>
+  </view>
+</view>
+
+<view bindtap="writeShare" style="width:120rpx;height:120rpx;position:fixed;right:30rpx;bottom:130rpx;text-align:center;background:white;border-radius:50%; box-shadow:0px 0px 2px 2px #DDDDDD;">
+  <view class="cuIcon-writefill text-blue" style="font-size:70rpx">
+  </view>
+  <view class="text-blue" style="font-size:20rpx">立即制作</view>
+</view>

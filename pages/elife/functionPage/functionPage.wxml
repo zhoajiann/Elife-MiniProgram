@@ -1,0 +1,12 @@
+<!--pages/elife/functionPage/functionPage.wxml-->
+
+<!-- {{gridBorder?'':'no-border'}} -->
+<view style="height:30rpx"></view>
+<view class="cu-list grid col-2 funChoice " >
+  <view class="cu-item fun " wx:for="{{ choice }}" bindtap="goToPage" id="{{ item.ename }}">
+    <view class="cuIcon-{{item.icon}} text-blue" id="{{ item.ename }}" style="font-size:60rpx">
+      <!-- {{item.icon}}   {{item.color}} -->
+    </view>
+    <text style="font-size:35rpx">{{item.name}}</text>
+  </view>
+</view>

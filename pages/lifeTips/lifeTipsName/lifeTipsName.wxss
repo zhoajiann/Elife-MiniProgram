@@ -1,0 +1,18 @@
+/* pages/lifeTips/lifeTipsName/lifeTipsName.wxss */
+
+.cu-avatar{
+  margin-left: -8rpx;
+}
+.text-grey{
+  margin-bottom: -36rpx;
+  font-size:28rpx;
+  margin-left:-12rpx;
+}
+.span2 {
+  position: relative;
+  top:20rpx;
+  right:-8rpx;
+  color: #bbb;
+  font-size: 24rpx;
+}
+

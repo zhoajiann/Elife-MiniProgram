@@ -1,0 +1,76 @@
+/**index.wxss**/
+@import "../../colorui/icon.wxss";
+@import "../../colorui/main.wxss";
+
+.swip{
+  height:550rpx;
+}
+
+
+.list{
+  border-radius:15px;
+}
+
+.text {
+  height: 140rpx;
+  width: 100%;
+  /* border-top: 5px solid lightgray; */
+  border-bottom: 2px solid lightgray;
+}
+
+.childtext {
+  text-align: center;
+  font-size: 45rpx;
+  line-height: 50rpx;
+  color: #696969;
+}
+
+.apptext {
+  font-size: 40rpx;
+  width: 260rpx;
+  display: block;
+  float: left;
+  height: 60rpx;
+  line-height: 150rpx;
+  margin-left: 25rpx
+}
+
+.ap {
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 35rpx;
+  margin-top: 15rpx;
+  display: inline-block;
+}
+
+.picon {
+  width: 80rpx;
+  height: 50%;
+  float: left;
+  margin-top: 7%;
+  margin-left: 140rpx;
+}
+
+.phoicon {
+  width: 80rpx;
+  height: 50%;
+  float: left;
+  margin-top: 8%;
+  margin-left: 10rpx;
+}
+
+/* 提示 */
+.reminder{
+  font-size: 18;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  text-align: center;
+}
+.reminderList{
+  text-align:left;
+}
+.reminder text{
+  line-height: 70rpx;
+  height: 70rpx;
+  font-size:medium;
+}

@@ -1,0 +1,26 @@
+/* pages/elife/guide/guide.wxss */
+page{
+  height: 100%;
+}
+.logo{
+  width: 100%;
+  height:h;
+}
+.logo image{
+  width: 240rpx;
+  height: 230rpx;
+  margin-top: 100rpx;
+  margin-left: 235rpx;
+}
+
+/* 温馨提示 */
+.reminder{
+  font-size: 18;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.reminder text{
+  line-height: 70rpx;
+  height: 70rpx;
+  font-size: large;
+}

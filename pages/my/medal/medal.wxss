@@ -1,0 +1,24 @@
+/* pages/my/medal/medal.wxss */
+
+
+/* page{
+  background: var(--gradualBlue) no-repeat;
+  color: var(--white);
+  background-size: cover;
+} */
+.container {
+  position: relative;
+}
+.container::after {              
+  content: "";                   
+  background: var(--gradualBlue) no-repeat center;                         
+  background-size: cover;                     
+  top: 0;                        
+  bottom: -10%;                     
+  left: 0;                       
+  right: 0;                      
+  position: absolute;            
+  z-index: -1;                   
+}
+
+

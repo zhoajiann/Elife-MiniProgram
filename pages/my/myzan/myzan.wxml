@@ -1,0 +1,38 @@
+<!--pages/lifeTips/lifeTipsName/lifeTipsName.wxml-->
+<block wx:if="{{list[0]}}">
+<view wx:for="{{list}}" wx:key="index" class="titleList" bindtap="goToPage" id="{{list[index]['id']}}">
+  <view class="cu-card case {{isCard?'no-card':''}}">
+    <view class="cu-item shadow">
+      <view class="image">
+        <image src="{{list[index]['image']}}" mode="widthFix" style='height:auto'></image>
+      </view>
+      <view class="cu-list menu-avatar">
+        <view class="cu-item" style="height:110rpx">
+          <view class="cu-avatar round" style="overflow:hidden">
+            <image src='../../../pics/yiyong.png' mode="widthFix" style='height:auto'/>
+          </view>
+          <view class="content flex-sub">
+            <view class="text-grey" style='font-size:14px;margin-left:-12px;'>{{list[index]['title']}}</view>
+            <view class="text-gray text-sm flex justify-between">
+              <text> </text>
+              <view class="text-gray text-sm">
+                <text class="span2 margin-lr-xs">{{date[index]}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+</block>
+
+<block wx:else >
+  <view style="width:100%;height:100%;text-align:center">
+    <image
+      src="../../../pics/nullData2.png"
+      style="width:25%;height:15%;display:inline-block;color:#aaa;margin-top:40%"
+    />
+    <view style="color:#999;font-size:14px">还没有点赞的文章哦</view>
+  </view>
+</block>

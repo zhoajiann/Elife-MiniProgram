@@ -1,0 +1,38 @@
+/* pages/my/myHome/myHome.wxss */
+/* 头像 */
+
+@import "../../../colorui/animation.wxss";
+@import "../../../colorui/main.wxss";
+@import "../../../colorui/icon.wxss";
+
+image[class*="gif-"] {
+  border-radius: 6rpx;
+  display: block;
+}
+
+
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #fff;
+  font-size: 35rpx;
+}
+
+.bgimage{
+  height: 60rpx;
+  width: 60rpx;
+}
+
+.jifen{
+  color: #fff;
+  font-size: 35rpx;
+}
+
+.button{
+  border:none;
+  text-align: left;
+}

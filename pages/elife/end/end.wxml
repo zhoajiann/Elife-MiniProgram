@@ -1,0 +1,11 @@
+<!--pages/elife/end/end.wxml-->
+<view style="height:100%;width:100%;background:#F0FFF0;">
+    <view class="logo">
+      <image src="../../../pics/yiyong.png"></image>
+    </view>
+    <view class="reminder">
+      <text>恭喜您已完成此次指引，积分+20，快去实践吧！</text>
+    </view>
+    <button style="width:50%;margin-top:55rpx;background:#00b3c4;color:#fff;font-size:50rpx" bindtap='getLogin'>确定</button>
+    
+</view>

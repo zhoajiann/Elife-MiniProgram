@@ -1,0 +1,38 @@
+<!--pages/my/rank/rank.wxml-->
+
+<view class="bg-white">
+  <view class="flex padding justify-center">
+    <view class="cu-avatar round bg-gradual-blue cu-list" style="width:300rpx;height:300rpx;">
+      <view class="cu-item">
+        <view class="paiming">当前排名</view>
+        <view class="mingci">{{rank}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-list menu sm-border ard-menu margin-top">
+    <view class="cu-item">
+      <view class="content flex">
+        <view class="flex-sub padding-sm margin-xs radius justify-center list-head">排名</view>
+      </view>
+      <view class="content flex">
+        <view class="flex-sub padding-sm margin-xs radius justify-center list-head">昵称</view>
+      </view>
+      <view class="content flex">
+        <view class="flex-sub padding-sm margin-xs radius justify-center list-head">积分</view>
+      </view>
+    </view>
+
+    <view class="cu-item" wx:for="{{arr}}">
+      <view class="content flex">
+        <view class="flex-sub padding-sm margin-xs radius justify-center">{{index+1}}</view>
+      </view>
+      <view class="content flex">
+        <view class="flex-sub padding-sm margin-xs radius justify-center">{{item.username}}</view>
+      </view>
+      <view class="content flex">
+        <view class="flex-sub padding-sm margin-xs radius justify-center">{{item.integral}}</view>
+      </view>
+    </view>
+  </view>
+</view>

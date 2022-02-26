@@ -1,0 +1,15 @@
+/* pages/selfmake/makeTips/makeTips.wxss */
+page{
+  background-color: #fff;
+}
+.tips{
+  width:660rpx;
+  height: 300rpx;
+  margin-top: 40rpx;
+  margin-left: 45rpx;
+  line-height: 65rpx;
+  color:#668497;
+}
+.mark{
+  font-weight: 700;
+}

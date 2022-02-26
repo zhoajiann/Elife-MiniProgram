@@ -1,0 +1,10 @@
+/* pages/my/people/people.wxss */
+/* page text{
+  line-height: 70rpx;
+  font-size: large;
+  margin-left: 30rpx;
+} */
+
+page{
+  background-color: #fff;
+}

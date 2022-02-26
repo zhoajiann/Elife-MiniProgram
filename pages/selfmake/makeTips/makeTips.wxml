@@ -1,0 +1,28 @@
+<!--pages/selfmake/makeTips/makeTips.wxml-->
+<view class="flex margin radius bg-gradual-blue shadow-blur align-center justify-center"
+  style="height:300rpx;margin-top:75rpx" bindtap="isMake">
+  <view style="font-size:50rpx">点击此处制作教程</view>
+</view>
+<view class="tips">
+  <view>温馨提示：</view>
+  <view>
+    <text class="cuIcon-title text-blue"></text>
+    此功能在您的积分达到<text class="mark"> 20 </text>后才能使用
+  </view>
+  <view>
+    <text class="cuIcon-title text-blue"></text>
+    您可以通过学习我们提供的教程来获得积分
+  </view>
+  <view>
+    <text class="cuIcon-title text-blue"></text>
+    您提交的教程我们会在七个工作日内反馈审核结果
+  </view>
+  <view>
+    <text class="cuIcon-title text-blue"></text>
+    您的教程审核通过会为您增加<text class="mark"> 66 </text>积分
+  </view>
+  <view>
+    <text class="cuIcon-title text-blue"></text>
+    您的教程审核被选为官方教程会为您增加<text class="mark"> 88 </text>积分
+  </view>
+</view>

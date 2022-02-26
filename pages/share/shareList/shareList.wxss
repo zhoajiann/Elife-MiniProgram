@@ -1,0 +1,37 @@
+/* pages/share/share.wxss */
+.box {  
+  margin: 20rpx 0; 
+}
+
+.box view.cu-bar {
+  margin-top: 20rpx; 
+}
+
+.list{
+  border-radius:15px;
+}
+
+.funtext{
+  display: inline-block;
+  margin-top: 13rpx;
+  font-size: 45rpx;
+  line-height: 70rpx;
+
+}
+
+.apptext {
+  font-size: 35rpx;
+  display: inline-block;
+  margin-top: 13rpx;
+  /* float: right; */
+  margin-right: 15%;
+  margin-left: 5%;
+  line-height: 70rpx;
+  
+}
+
+.ap {
+  margin-left: 35rpx;
+  margin-top: 25rpx;
+  display: inline-block;
+}

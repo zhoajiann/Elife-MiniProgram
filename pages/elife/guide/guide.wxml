@@ -1,0 +1,18 @@
+<!--pages/elife/guide/guide.wxml-->
+<view style="height:100%;width:100%;background:#F0FFF0;">
+    <view class="logo">
+      <image src="../../../pics/yiyong.png"></image>
+    </view>
+    <view class="reminder">
+      <text style="font-weight:bold;font-size:large">温馨提示:\n</text>
+      <text>该功能只是模拟各APP如何使用，而非真正打开相应APP，请您放心使用。\n</text>
+      <text>此页面为您介绍操作中每个按钮的功能\n</text>
+      <text>1、左箭头可以返回上一步\n</text>
+      <text>2、右箭头可以进入下一步\n</text>
+      <text>3、接下来的每一步跟随绿色小圆点的指引\n</text>
+      <text>点击下边的确定按钮开始进行模拟操作吧！\n</text>
+    </view>
+    <!-- <navigator open-type="navigate" url="/pages/elife/detail/detail"> -->
+    <button style="width:50%;margin-top:50rpx;background:#00b3c4;color:#fff;font-size:50rpx" bindtap="goToPage">确定</button>
+  <!-- </navigator> -->
+</view>

@@ -1,0 +1,95 @@
+<!--pages/sharePage/sharePage.wxml-->
+
+<!--  详情步骤页 -->
+<view wx:key="index" class="views">
+  <!-- 图片 -->
+  <image src="{{step['img']}}" class="step" mode='widthFix'></image>
+  <!-- 圆点 -->
+  <image src='../../../pics/dote.png' class="dote animImage"
+    style="position:absolute;left:{{step['dote1']}}px;top:{{step['dote2']}}px;" bindtap="nextStep"></image>
+  <!-- 说明文字 -->
+  <text style="position:absolute;left:{{step['dote3']}}px;top:{{step['dote4']}}px" bindtap="nextStep"
+    class='word'>　{{step['text']}}　</text>
+  <!-- 左右箭头 -->
+  <view>
+    <!-- < -->
+    <view class="preStep" bindtap="preStep">
+      <image src="../../../pics/left.png" style="width:100rpx;height:100rpx"></image>
+    </view>
+    <!-- > -->
+    <view class="nextStep" bindtap="nextStep">
+      <image src="../../../pics/right.png" style="width:100rpx;height:100rpx"></image>
+    </view>
+  </view>
+</view>
+
+
+<view wx:if="{{user==true && type=='share'}}"  class="cu-modal {{modalName == 'Iamge' ? 'show' : ''}}">
+  <view class="cu-dialog">
+    <view class="bg-img">
+      <view class="cu-bar justify-end ">
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close "></text>
+        </view>
+      </view>
+      <view class="logo">
+      <image src="../../../pics/yiyong.png"></image>
+    </view>
+      <view class="reminder margin">
+          <text>恭喜您已完成此次指引，\n积分<text class="credit" >+20</text>，快去实践吧！
+          </text>
+        </view>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub  solid-left" bindtap="getLogin">我知道了</view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 结束提醒 -->
+<view wx:elif="{{type=='my'}}" class="cu-modal {{modalName == 'Iamge' ? 'show' : ''}}">
+  <view class="cu-dialog">
+    <view class="bg-img">
+      <view class="cu-bar justify-end ">
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close "></text>
+        </view>
+      </view>
+      <view class="logo">
+      <image src="../../../pics/yiyong.png"></image>
+    </view>
+      <view class="reminder margin">
+          <text>恭喜您已完成此次指引，快去实践吧！
+          </text>
+        </view>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub  solid-left" bindtap="">我知道了</view>
+    </view>
+  </view>
+</view>
+
+
+<view wx:else  class="cu-modal {{modalName == 'Iamge' ? 'show' : ''}}">
+  <view class="cu-dialog">
+    <view class="bg-img">
+      <view class="cu-bar justify-end ">
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close "></text>
+        </view>
+      </view>
+      <view class="logo">
+      <image src="../../../pics/yiyong.png"></image>
+    </view>
+      <view class="reminder margin">
+          <text>恭喜您已完成此次指引，\n 快去实践吧！
+          </text>
+        </view>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub  solid-left" bindtap="getLogin">我知道了</view>
+    </view>
+  </view>
+</view>
+

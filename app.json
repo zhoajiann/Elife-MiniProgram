@@ -1,0 +1,63 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/selfmake/makeTips/makeTips",
+    "pages/selfmake/make/make",
+    "pages/selfmake/stepMaking/stepMaking",
+    "pages/my/medal/medal",
+    "pages/my/myHome/myHome",
+    "pages/logs/logs",
+    "pages/lifeTips/lifeTipsName/lifeTipsName",
+    "pages/lifeTips/lifeTipDetail/lifeTipDetail",
+    "pages/my/myzan/myzan",
+    "pages/my/myshoucang/myshoucang",
+    "pages/my/rank/rank",
+    "pages/my/people/people",
+    "pages/elife/guide/guide",
+    "pages/elife/functionPage/functionPage",
+    "pages/elife/detail/detail",
+    "pages/elife/end/end",
+    "pages/share/shareList/shareList"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#1890FF",
+    "navigationBarTitleText": "教你轻松用手机",
+    "navigationBarTextStyle":"white"
+  },
+
+  "tabBar":{
+    
+    "selectedColor": "#1890FF",
+    "color": "#444", 
+    "list":[
+      {
+        "pagePath": "pages/index/index",
+        "text":"主页",
+        "iconPath":"pics/new/pre_home.png",
+        "selectedIconPath":"pics/new/home.png"
+      },
+      {
+        "pagePath": "pages/share/shareList/shareList",
+        "text":"共享教程",
+        "iconPath":"pics/new/pre_share.png",
+        "selectedIconPath":"pics/new/share.png"
+      },
+      {
+        "pagePath": "pages/lifeTips/lifeTipsName/lifeTipsName",
+        "text":"生活小贴士",
+        "iconPath":"pics/new/pre_list.png",
+        "selectedIconPath":"pics/new/list.png"
+      },
+      {
+        "pagePath": "pages/my/myHome/myHome",
+        "text":"我的",
+        "iconPath":"pics/new/pre_my.png",
+        "selectedIconPath":"pics/new/my.png"
+      }
+    ]
+  },
+
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

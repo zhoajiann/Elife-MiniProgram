@@ -1,0 +1,86 @@
+<!--pages/my/medal/medal.wxml-->
+<view class="container">
+<view>
+  <view class="flex justify-center margin-top padding-right">
+      <image bindtap="bindViewTap" class="cu-avatar xl round margin-left bg-white" src="{{avatarUrl}}" mode="cover"  style="width:200rpx;height:200rpx"></image>
+  </view>
+  <view class="flex justify-center margin-top">
+    <text style="font-size:35rpx;color:white" >已获得{{num}}枚勋章</text>
+  </view>
+</view>
+
+<view class="card-menu margin shadow-lg">
+  <view class="cu-item card-menu bg-white">
+    <view class="flex">
+      <view class="flex-sub margin-left-xs margin-top">
+        <image src="{{num>=1?imgs[0]:imgs[1]}}" style="height:300rpx;width:330rpx;" ></image>
+      </view>
+      <view class="flex-sub margin-top">
+        <image src="{{num>=2?imgs[2]:imgs[3]}}" style="height:300rpx;width:330rpx;"></image>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item card-menu bg-white">
+    <view class="flex">
+      <view class="flex-sub margin-left-xs margin-top">
+        <image src="{{num>=3?imgs[4]:imgs[5]}}" style="height:300rpx;width:330rpx;"></image>
+      </view>
+      <view class="flex-sub margin-top">
+        <image src="{{num>=4?imgs[6]:imgs[7]}}" style="height:300rpx;width:330rpx;"></image>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item card-menu bg-white padding-bottom">
+    <view class="flex">
+      <view class="flex-sub margin-left-xs margin-top">
+        <image src="{{num>=5?imgs[8]:imgs[9]}}" style="height:300rpx;width:330rpx;"></image>
+      </view>
+      <view class="flex-sub margin-top">
+        <image src="{{num>=6?imgs[10]:imgs[11]}}" style="height:300rpx;width:330rpx;"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+  <!-- <view style="color:white">
+    <view class="flex justify-center" style="font-size:35rpx">勋章获得规则</view>
+    <view class="flex justify-center">新手小白：获得20积分</view>
+    <view class="flex justify-center">初出茅庐：获得100积分</view>
+    <view class="flex justify-center">展露风采：获得300积分</view>
+    <view class="flex justify-center">游刃有余：获得500积分</view>
+    <view class="flex justify-center">大显身手：获得800积分</view>
+    <view class="flex justify-center">名声大噪：获得1000积分</view>
+  </view> -->
+
+  <view style="color:white;text-decoration:underline;" bindtap="showModal" data-target="rules" >
+    点击查看勋章点亮规则
+  </view>
+
+  <view class="cu-modal {{modalName=='rules'?'show':''}}">
+    <view class="cu-dialog">
+      <view>
+        <view class="cu-bar justify-end text-black">
+          <view class="cu-bar justify-end action" bindtap="hideModal">
+            <text class="cuIcon-close "></text>
+          </view>
+        </view>
+        <view class="reminder text-black ">
+          <text style="font-weight:bold;font-size:large;">温馨提示\n</text>
+          <view class="reminderList margin">
+            <view class="flex justify-center margin-bottom-xs">新手小白：获得20积分</view>
+            <view class="flex justify-center margin-bottom-xs">初出茅庐：获得100积分</view>
+            <view class="flex justify-center margin-bottom-xs">展露风采：获得300积分</view>
+            <view class="flex justify-center margin-bottom-xs">游刃有余：获得500积分</view>
+            <view class="flex justify-center margin-bottom-xs">大显身手：获得800积分</view>
+            <view class="flex justify-center margin-bottom-xs">名声大噪：获得1000积分</view>
+            <text>\n</text>
+          </view>
+        </view>
+      </view>
+      <view class="cu-bar bg-white">
+        <view class="action margin-0 flex-sub  solid-left" bindtap="hideModal">确定</view>
+      </view>
+    </view>
+  </view>
+
+</view>

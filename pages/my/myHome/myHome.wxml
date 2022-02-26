@@ -1,0 +1,77 @@
+<!--pages/my/myHome/myHome.wxml-->
+
+<view class="margin radius bg-gradual-blue shadow-blur">
+  <view  style="height:250rpx">
+      <view  class="flex justify-center" wx:if="{{!hasUserInfo&&!user}}" style="padding-top:25%">
+        <button class="cu-btn round lg shadow" bindtap="getUserProfile">登录获取信息</button>
+      </view>
+      <block wx:else>
+        <view class="flex padding justify-center">
+          <view class=" margin-xs">
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          </view>
+        </view>
+        <view class="flex justify-center">
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </view>
+        <view class="flex padding justify-center">
+            <text class="cuIcon-evaluate text-red" style="font-size:40rpx"></text>
+            <text class="jifen padding-left-xs" style="position:ansolute">当前积分：{{score}}</text>
+        </view>
+      </block>
+    </view>
+  <image src="../../../pics/wave.gif" mode="scaleToFill" class="gif-black response" style="height:200rpx"></image>
+</view>
+
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow" bindtap='login' id="/pages/my/medal/medal">
+      <view class="content">
+        <text class="cuIcon-selectionfill text-orange"></text>
+        <text class="text-grey">我的勋章</text>
+      </view>
+    </view>
+    <view class="cu-item arrow"  bindtap='login' id="/pages/my/rank/rank">
+      <view class="content">
+        <text class="cuIcon-list text-green"></text>
+        <text class="text-grey">积分排行榜</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow" bindtap='login' id="/pages/my/myzan/myzan">
+      <view class="content">
+        <text class="cuIcon-appreciatefill text-yellow"></text>
+        <text class="text-grey">我的赞</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" bindtap='login' id="/pages/my/myshoucang/myshoucang">
+      <view class="content">
+        <text class="cuIcon-favorfill text-red"></text>
+        <text class="text-grey">我的收藏</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" bindtap='login' id="/pages/my/myAppFunc/myAppFunc">
+      <view class="content">
+        <text class="cuIcon-form text-blue"></text>
+        <text class="text-grey">我的教程</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+      <button class="content button" open-type="feedback">
+        <text class="cuIcon-writefill text-cyan"></text>
+        <text class="text-grey" style="font-weight:normal">意见反馈</text>
+      </button>
+    </view>
+    <view class="cu-item arrow" bindtap='login' id="/pages/my/people/people">
+      <view class="content">
+        <text class="cuIcon-friendfavor text-orange"></text>
+        <text class="text-grey">开发人员</text>
+      </view>
+    </view>
+  </view>
+
+  

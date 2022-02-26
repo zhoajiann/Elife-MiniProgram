@@ -1,0 +1,77 @@
+<!--index.wxml-->
+<view>
+  
+  <!-- 轮播图 -->
+  <swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}} swip" 
+    indicator-dots="true" circular="true"
+    autoplay="true" interval="5000" duration="500"
+    style="width:93%;height:250rpx;margin:0 auto;border-radius:10rpx;overflow:hidden;margin-top:20rpx"
+  >
+    <swiper-item wx:for="{{swiperList}}" wx:key>
+      <image src="{{swiperList[index]['path']}}" mode="aspectFill"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- title -->
+  <!-- <view class="text">
+    <view class="childtext">
+      <text decode="{{true}}">
+        --&nbsp;模&nbsp;&nbsp;&nbsp;拟&nbsp;&nbsp;&nbsp;使&nbsp;&nbsp;&nbsp;用&nbsp;&nbsp;&nbsp;教&nbsp;&nbsp;&nbsp;程&nbsp;--
+      </text>
+    </view>
+  </view> -->
+
+  <view style="height：80rpx; margin-left:35rpx">
+    <text style="font-size:40rpx;color: #1890FF;display:inline-block">
+      | 
+    </text>
+    <text style="font-size:40rpx;display:inline-block">
+      使用教程
+    </text>
+  </view>
+
+  <!-- APP列表 -->
+  <view wx:for="{{list}}" wx:key="index" class="margin bg-white card-menu list">
+    <view style="height:150rpx;" bindtap="showModal" data-target="Image" id="{{list[index]['appname']}}">
+      <view class="ap">
+        <image src="{{list[index]['image']}}" style="width:100rpx;height:100rpx;margin-left:10rpx;margin-top:8rpx;">
+        </image>
+      </view>
+      <view style="float:right;height:150rpx;width:500rpx;">
+        <text class="apptext">{{list[index]['cname']}}</text>
+        <text style="float:left;line-height:150rpx;font-size:30rpx;color:gray">立即学习</text>
+        <image src="../../pics/right.png"
+          style="float:left;width:35rpx;height:40rpx;margin-top:55rpx;margin-left:20rpx"></image>
+      </view>
+    </view>
+  </view>
+
+<!-- 提示 -->
+  <view class="cu-modal {{modalName=='Image'?'show':''}}">
+    <view class="cu-dialog">
+      <view>
+        <view class="cu-bar justify-end text-black">
+          <view class="cu-bar justify-end action" bindtap="hideModal">
+            <text class="cuIcon-close "></text>
+          </view>
+        </view>
+        <view class="reminder text-black ">
+          <text style="font-weight:bold;font-size:large;">温馨提示\n</text>
+          <view class="reminderList">
+            <text>该功能只是模拟各APP如何使用，而非真正打开相应APP，请您放心使用。\n</text>
+            <text>此页面为您介绍操作中每个按钮的功能\n</text>
+            <text>1、左箭头可以返回上一步\n</text>
+            <text>2、右箭头可以进入下一步\n</text>
+            <text>3、接下来的每一步跟随绿色小圆点的指引\n</text>
+            <text>点击下边的确定按钮开始进行模拟操作吧！\n</text>
+            <text>\n</text>
+          </view>
+        </view>
+      </view>
+      <view class="cu-bar bg-white" bindtap="goToPage">
+        <view class="action margin-0 flex-sub  solid-left" >我知道了</view>
+      </view>
+    </view>
+  </view>
+
+</view>

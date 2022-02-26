@@ -1,0 +1,28 @@
+<!--pages/my/people/people.wxml-->
+
+
+
+<view class="cu-bar solid-bottom">
+  <view class="action">
+    <text class="cuIcon-title text-blue"></text>开发人员
+  </view>
+</view>
+<view class="flex justify-center">
+  <view class="margin-xs">陈欣</view>
+  <view class="margin-xs">李宁</view>
+  <view class="margin-xs">卢冰</view>
+  <view class="margin-xs">齐盼盼</view>
+  <view class="margin-xs">王若冰</view>
+  <view class="margin-xs">赵健</view>
+</view>
+<view class="flex justify-center">
+  <view class="margin-xs">（河北师范大学软件学院）</view>
+</view>
+<view class="cu-bar solid-bottom">
+  <view class="action">
+    <text class="cuIcon-title text-blue"></text>致谢
+  </view>
+</view>
+<view class="flex justify-center">
+  <view class="margin-xs">感谢微信小程序平台、腾讯云服务器技术支持</view>
+</view>

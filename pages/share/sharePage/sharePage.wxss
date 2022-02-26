@@ -1,0 +1,80 @@
+/* pages/sharePage/sharePage.wxss */
+page{
+  position: relative;
+}
+
+.views{
+  vertical-align: middle;
+}
+
+.dote{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  z-index: 1;
+}
+
+.animImage {
+  -webkit-animation-name: imageAnim;
+  -webkit-animation-duration:1.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-play-state: running;
+  }
+
+  @-webkit-keyframes imageAnim{
+  0% {opacity: 0;}
+  50% {opacity: 0.5;width: 55rpx;height: 55rpx;}
+  100% {opacity: 1;width: 60rpx;height: 60rpx;}
+  }
+
+.step{
+  width: 100%;
+  opacity: 0.8;
+  position: relative;
+}
+
+.word{
+  line-height: 70rpx;
+  font-size: larger;
+  /* background: rgba(0,179,196 0.5); */
+  background-color: #1890ff;
+  opacity: 0.8;
+  border-radius: 20rpx;
+  color: #fff;
+}
+
+.preStep{
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  left: 0;
+  top:550rpx;
+}
+
+
+.nextStep{
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  right: 10rpx;
+  top:550rpx;
+}
+
+/* 提示 */
+.logo image{
+  /* max-width: 50%; */
+  height: 200rpx;
+  width: 200rpx;
+}
+.reminder{
+  line-height: 70rpx;
+  font-size: large;
+  /* margin: auto; */
+}
+.credit{
+  color: #fbbd08;
+  font-size: 1.5em;
+  font-weight: bold;
+}

@@ -1,0 +1,15 @@
+/* pages/my/rank/rank.wxss */
+
+
+.paiming{
+  top:10%;
+}
+.mingci{
+  font-size: 90rpx;
+  font-weight: 600;
+}
+
+.list-head{
+  font-size:larger;
+  font-weight:bold
+}

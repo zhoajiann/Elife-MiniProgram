@@ -1,0 +1,24 @@
+<!--pages/my/myAppFunc/myAppFunc.wxml-->
+
+<!-- 教程列表 -->
+<view wx:for="{{list}}" wx:key="index" class="margin bg-white card-menu list">
+  <view style="height:230rpx;position:relative" bindtap="goToPage" data-target="Image" id="{{list[index]['id']}}">
+    <view class="ap">
+      <image src="{{list[index]['icon']}}" style="width:180rpx;height:180rpx;">
+      </image>
+    </view>
+    <view style="position:absolute;top:0;right:0;width:460rpx;height:230rpx;">
+      <view> 
+        <text class="funtext">{{item['funcname']}} </text>
+        <text class="apptext">{{list[index]['appname']}}</text>
+      </view>
+
+      <view  class="padding-sm flex flex-wrap" style="padding:0">
+          <view  class="cu-tag bg-{{item.color}}">{{item.review}}</view>
+          <view wx:if="{{item.color == 'red'}}">（{{item.reason}}）</view>
+      </view>
+      <view style="position:absolute;right:30rpx;bottom:30rpx"> 上传于 {{item['time']}}</view>
+
+    </view>
+  </view>
+</view>

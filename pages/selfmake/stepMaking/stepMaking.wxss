@@ -1,0 +1,26 @@
+/* pages/selfmake/stepMaking/stepMaking.wxss */
+page{
+  background-color: #fff;
+}
+
+.dote{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  z-index: 1;
+}
+
+.animImage {
+  -webkit-animation-name: imageAnim;
+  -webkit-animation-duration:1.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-play-state: running;
+  }
+
+  @-webkit-keyframes imageAnim{
+  0% {opacity: 0;}
+  50% {opacity: 0.5;width: 55rpx;height: 55rpx;}
+  100% {opacity: 1;width: 60rpx;height: 60rpx;}
+  }
